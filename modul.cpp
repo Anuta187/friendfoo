@@ -1,21 +1,23 @@
 #include <iostream>
 #include <string>  
+ 
 
 class Auto
 {
-    friend void drive(Auto&);
-    friend void setPrice(Auto&, int price);
+    friend void drive(Auto &);
+    friend void setPrice(Auto &, int price);
+    
 public:
-    Auto(std::string autoName, int autoPrice)
-    {
-        name = autoName;
+    Auto(std::string autoName, int autoPrice) 
+    { 
+        name  = autoName; 
         price = autoPrice;
     }
-    std::string getName() { return name; }
+    std::string getName(){ return name; }
     int getPrice() { return price; }
-
+ 
 private:
-    std::string name;   // название автомобиля
-    int price;  // цена автомобиля
+    std::string name;     // РЅР°Р·РІР°РЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ
+    int price;            // С†РµРЅР° Р°РІС‚РѕРјРѕР±РёР»СЏ
 };
 
